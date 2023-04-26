@@ -1,7 +1,19 @@
 
 (function() {
+  /**
+   * Detect the screen width and dynamically set the video source based on the screen size
+   */
   "use strict";
-
+  var video = document.getElementById("bg-video");
+  var width = screen.width;
+// Set the video source based on screen size
+  if (width < 768) {
+    video.src = 'assets/img/portfolio/video-desktop.mp4';
+  } else {
+    video.src = 'assets/img/portfolio/video-desktop.mp4';
+  }
+  video.type = "video/mp4";
+  video.load();
   /**
    * Easy selector helper function
    */
